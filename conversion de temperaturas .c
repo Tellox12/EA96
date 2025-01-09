@@ -3,7 +3,7 @@
 //
 #include<stdio.h>
 
-int a;
+float a, temp, resultado;
 
 float celsiusToFahrenheit(float celsius, float cto){
     cto = celsius * 9/5 + 32;
@@ -38,8 +38,26 @@ float celsiusToKelvin(float celcius, float ctk){
 
 
 void displayMenu() {
-    printf("Seleccione la opcion que necesites:\n\n1-celcius a fahrenheit\n\n2- fahrenheit a celsius\n\n3-celcius a kelvin");
-    scanf("%d",&a);
+    switch(a) {
+        case 1:
+            printf("Ingrese la temperatura en Celsius: ");
+        scanf("%f", &temp);
+        resultado = celsiusToFahrenheit(temp);
+        break;
+        case 2:
+            printf("Ingrese la temperatura en Fahrenheit: ");
+        scanf("%f", &temp);
+        resultado = fahrenheitToCelsius(temp);
+        break;
+        case 3:
+            printf("Ingrese la temperatura en Celsius: ");
+        scanf("%f", &temp);
+        resultado = celsiusToKelvin(temp);
+        break;
+        default:
+            printf("Opción no válida, por favor intente de nuevo.\n");
+        continue;
+    }
 
 }
 
@@ -47,7 +65,7 @@ void displayMenu() {
 
 int main() {
 
-celsiusToFahrenheit();
+displayMenu();
 
 
         return 0;
