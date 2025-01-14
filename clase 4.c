@@ -10,8 +10,7 @@ int isPalindrome(char* cadena) {
     while (inicio <= final) {
         if (cadena[inicio++] != cadena[final--])
             return 0;
-        inicio++;
-        final--;
+
     }
     return 1;
 
