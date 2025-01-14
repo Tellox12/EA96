@@ -1,0 +1,62 @@
+SUMA DE ARREGLOS
+
+public static int simpleArraySum(List<Integer> ar) {
+    int suma=0;
+    for(int i=0; i<ar.size(); i++){
+        suma+=ar.get(i);
+
+    }
+
+    return suma;
+
+    }
+
+}
+///////////////////////////////////////////////////////////////////////
+
+ALICE Y BOB
+
+public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+
+
+    List<Integer>result = new ArrayList();
+    int resultadoAlice=0;
+    int resultadoBob=0;
+
+    for(int i=0; i<3; i++){
+        if(a.get(i)>b.get(i)){
+            resultadoAlice+=1;
+        }
+        if(a.get(i)<b.get(i)){
+            resultadoBob+=1;
+        }
+    for(int i=0)
+    }
+result.add(resultadoAlice);
+result.add(resultadoBob);
+return result;
+    }
+
+}
+
+////////////////////////////////////////////////////////
+
+VELITAS DEL PASTEL
+
+public static int birthdayCakeCandles(List<Integer> candles) {
+    int alt=0;
+    int numvelitas=0;
+    for(int i=0; i<candles.size(); i++){
+        if(alt<candles.get(i)){
+            alt=candles.get(i);
+        }
+    }
+    for(int i=0; i<candles.size(); i++){
+        if(alt==candles.get(i)){
+            numvelitas+=1;
+        }
+    }
+    return numvelitas;
+    }
+
+}
